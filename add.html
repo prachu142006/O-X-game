@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<body>
+    
+    <style>
+        body{
+            background-color: pink;
+            text-align: center;
+        
+            justify-content: center;
+        }
+    
+        
+    </style>
+    <input type="number" name="first" id="first" step="any"/>
+    <select id="ope">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+        <input type="number" name="second" id="second" step="any"/>
+        <br>
+        <br>
+        <button onclick="cal()">Calculate</button>
+        <input type="text" name="" id="res" readonly=""/>
+
+    
+    <!-- <h2>Addition of two numbers</h2>
+    <label for="num1">first number:</label>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <br>
+    <br>
+    <label for="num2">Second number:</label>
+    <input type="number" id="num2" placeholder="Enter second number">
+    <br>
+    <br>
+    <button onclick="addNumbers()" type="button">SUBMIT</button>
+    <h3 id="Result"></h3>
+
+    <script>
+        function addNumbers(){
+            let n1=parseFloat(document.getElementById("num1").value);
+                        let n2=parseFloat(document.getElementById("num2").value);
+        if(isNaN(n1) || isNaN(n2)){
+            document.getElementById("Result").innerText="please enter valid numbers!";
+        } 
+        else{
+            let sum=n1+n2;
+            document.getElementById("Result").innerText="sum:"+sum;
+        
+
+        }               
+
+        }
+    </script> -->
+    Name:<i id="result"></i>
+    <br>
+    <button onclick="call()">call</button>
+</body>
+<script type="text/javascript">
+    function cal(){
+    var opr1=document.getElementById('first').value;
+    var opr2=document.getElementById('second').value;
+        var ope=document.getElementById('ope').value;
+     if(ope=='+'){
+        var res=parseInt(opr1)+parseInt(opr2);
+
+     }
+     if(ope=='-'){
+        var res=parseInt(opr1)-parseInt(opr2);
+
+     }
+          if(ope=='*'){
+        var res=parseInt(opr1)*parseInt(opr2);
+        
+     }
+          if(ope=='/'){
+        var res=parseInt(opr1)/parseInt(opr2);
+        
+     }
+     document.getElementById('res').value=res;
+    }
+    function call(){
+        var name=prompt("enter your name!","");
+        document.getElementById('result').innerHTML=name;
+      }
+      var cars=["car1","car2","car3","car4"];
+      cars.forEach(car);
+      function car(item,index,array){
+        array[index]=item+"0";
+      }
+      cars.forEach(after);
+      function after(item,index){
+        document.write(index+"=>"+item+"<br/>");
+      }
+</script>
+</html>

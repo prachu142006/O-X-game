@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let newBtn=document.createElement("button");
+newBtn.innerText="click me";
+newBtn.style.color="white";
+newBtn.style.backgroundColor="red";
+document.querySelector("body").prepend(newBtn);
+let img=document.createElement("img");
+img.style.width="400px";
+img.style.width="400px";
+let pictures=["box3_image.jpg","box4_image.jpg","box7_image.jpg"
+
+]
+let index=0;
+
+newBtn.addEventListener("click",function(){
+    img.src=pictures[index];
+    if(!document.body.contains(img)){
+        document.body.appendChild(img);
+
+}
+index=(index+1)%pictures.length;
+});
+
+</script>
